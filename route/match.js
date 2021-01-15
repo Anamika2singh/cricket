@@ -4,7 +4,7 @@ const mongoose= require('mongoose');
 const teamNmodel = require('../model/nameTeam');
 const multer= require('multer');
 const playerModel =  require('../model/teamP');
-const scoremodel = require('../model/score');
+// const scoremodel = require('../model/score');
 const matchModel = require('../model/matchCreate');
 const playerscoreModel= require('../model/playerscore');
 mongoose.set('useFindAndModify', false);
