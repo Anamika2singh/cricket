@@ -227,6 +227,7 @@ catch(e){
 
 })
 router.post('/playerscore',async(req,res,next)=>{
+    try{
     console.log(req.body); 
     let result = await playerscoreModel.create({
         batsman:req.body.batsman
@@ -249,6 +250,10 @@ router.post('/playerscore',async(req,res,next)=>{
    })
   }
   res.send("updated")
+}
+catch(e){
+    console.log(e);
+}
 })
 router.get('/getscore',async(req,res,next)=>{
     let result= await playerModel.find();
